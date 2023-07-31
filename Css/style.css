@@ -16,7 +16,7 @@ nav {
     z-index: 100;
 }
 
-.nav-link {
+.nav-enlaces {
     display: flex;
     justify-content: flex-end;
     height: 80px;
@@ -44,7 +44,6 @@ footer {
     background-image: url(../images/colornav.png);
     display: flex;
     justify-content: space-between;
-    height: 90px;
     align-items: center;
     position: fixed;
     bottom: 0;
@@ -55,7 +54,11 @@ footer p {
     font-family: "zilla slab";
     font-size: 18px;
     color: white;
-    margin-left: 2rem;
+    margin-left: 4rem;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
 }
 
 footer a {
@@ -69,6 +72,7 @@ footer a {
 footer section div {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 /* Estilo de página de contacto */
