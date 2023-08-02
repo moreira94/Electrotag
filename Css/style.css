@@ -6,14 +6,6 @@
 }
 
 /* estilo de navbar */
-header {
-    background-image: url(../images/colornav.png);
-    position: fixed;
-    font-family: "zilla slab";
-    width: 100%;
-    height: 80px;
-    z-index: 100;
-}
 
 nav {
     background-image: url(../images/colornav.png);
