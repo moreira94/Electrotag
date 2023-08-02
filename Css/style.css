@@ -6,6 +6,10 @@
 }
 
 /* estilo de navbar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
 
 nav {
     background-image: url(../images/colornav.png);
