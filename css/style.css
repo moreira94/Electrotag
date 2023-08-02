@@ -9,7 +9,7 @@
 .nav {
     display: flex;
     justify-content: space-between;
-    padding-right: 30px;    
+    padding-right: 30px;
     background-image: url(../images/colornav.png);
     position: fixed;
     font-family: "zilla slab";
@@ -229,7 +229,7 @@ section div img {
 }
 
 .nssection {
-    height: 100vh   ;
+    height: 100vh;
     margin-left: 2rem;
 }
 
@@ -246,7 +246,7 @@ main section ul li a {
 }
 
 .prueba {
-    width: 100% ;
+    width: 100%;
     height: 300px;
     display: flex;
     /* Para alinear verticalmente */
