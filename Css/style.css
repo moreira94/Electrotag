@@ -7,7 +7,7 @@
 
 /* estilo de navbar */
 
-nav .nav-ppal {
+nav {
     background-image: url(../images/colornav.png);
     position: fixed;
     font-family: "zilla slab";
