@@ -25,6 +25,10 @@
     align-items: center;
 }
 
+nav a {
+    min-width: 120px;
+}
+
 header a img {
     position: fixed;
     width: 120px;
@@ -38,8 +42,8 @@ nav ul {
 
 footer {
     background-image: url(../images/colornav.png);
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
     align-items: center;
     position: fixed;
     bottom: 0;
@@ -51,25 +55,27 @@ footer p {
     font-family: "zilla slab";
     font-size: 18px;
     color: white;
-    margin-left: 4rem;
-    padding-bottom: 0;
+    padding: 0;
+    margin-left: 10px;
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 0;
 }
 
 footer a {
     font-family: "zilla slab";
     font-size: 18px;
     color: white;
-    margin-right: 2rem;
     text-decoration: none;
 }
 
-footer section div {
+
+
+.enlaces-footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    margin-right: 0;
+    padding-right: 0;
+    
 }
 
 /* Estilo de página de contacto */
