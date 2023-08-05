@@ -49,23 +49,24 @@ footer {
     bottom: 0;
     width: 100%;
     z-index: 1;
+    max-height: 110px;
 }
 
 footer p {
     font-family: "zilla slab";
-    font-size: 18px;
+    font-size: 15px;
     color: white;
     padding: 0;
     margin-left: 10px;
-    margin-top: 0;
     margin-bottom: 0;
 }
 
 footer a {
     font-family: "zilla slab";
-    font-size: 18px;
+    font-size: 15px;
     color: white;
     text-decoration: none;
+
 }
 
 
@@ -86,15 +87,12 @@ footer a {
 
 .mb-3 {
     width: 50%;
+    margin: 1rem;
+    text-align: left;
 }
 
 .contact-main {
     padding-top: 1rem;
-}
-
-section form div {
-    margin: 1rem;
-    text-align: left;
 }
 
 section form input,
@@ -120,28 +118,27 @@ section form textarea {
 
 }
 
-.background p {
-    color: transparent;
-}
-
 .marcas {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    align-items: center;
     width: 98%;
-    padding-bottom: 60px;
+    padding-bottom: 110px;
 }
 
 .imgindex {
+    display: flex;
+    justify-content: center;
     padding-bottom: 10px;
     padding-top: 40px;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 /* Otros formatos */
 
 .somos-sec {
-    margin-bottom: 6rem;
+    margin-bottom: 100px;
+    background-color: rgba(212, 209, 209, 0.909);
+
 }
 
 h1 {
@@ -151,6 +148,7 @@ h1 {
 
 main {
     background-color: rgba(212, 209, 209, 0.909);
+    width: 100%;
 }
 
 section h2 {
@@ -160,7 +158,6 @@ section h2 {
 }
 
 section h3 {
-    padding-top: 7rem;
     font-family: "zilla slab";
     font-size: 30px;
     margin-left: 1rem;
@@ -224,6 +221,12 @@ ol {
     font-size: 100;
 }
 
+.quienessomosformato {
+    padding-top: 110px;
+    text-align: justify;
+    padding-right: 80px;
+}
+
 section div img {
     height: 400px;
 }
@@ -236,7 +239,7 @@ section div img {
 
 .nssection {
     height: 100vh;
-    margin-left: 2rem;
+    margin-left: 40px;
 }
 
 main section ul li a {
@@ -265,3 +268,24 @@ main section ul li a {
 .c1 {
     background-color: blue;
 }
+
+    /* Media Queries */
+
+    @media only screen and (max-width: 400px){
+        .marcas {
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
+        }
+
+    }
+
+    @media only screen and (min-width: 401px) {
+        .marcas {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
