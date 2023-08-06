@@ -16,8 +16,13 @@
     width: 100%;
     max-height: 80px;
     z-index: 1;
+    padding: 0;
 }
 
+.navbar-collapse {
+    background-image: url(../images/colornav.png);
+    justify-content: right;
+}
 
 nav a {
     min-width: 120px;
@@ -25,10 +30,16 @@ nav a {
 
 header a img {
     width: 120px;
+
 }
 
 nav ul {
     list-style: none;
+}
+
+.container-fluid {
+    margin: 0;
+    padding-left: 0;
 }
 
 /* Estilo de Footer */
@@ -97,24 +108,14 @@ section form textarea {
 
 .text-container {
     background-image: url(../images/cocina.webp);
-    padding-top: 6rem;
+    padding-top: 80px;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.background {
-    background-image: url(../images/cocina.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
-
 }
 
 .marcas {
     justify-content: space-between;
     width: 98%;
-    padding-bottom: 110px;
 }
 
 .imgindex {
@@ -127,13 +128,6 @@ section form textarea {
 }
 
 /* Otros formatos */
-
-.somos-sec {
-    margin-bottom: 100px;
-    background-color: rgba(212, 209, 209, 0.909);
-
-}
-
 h1 {
     padding-top: 5rem;
     padding-left: 1rem;
@@ -142,6 +136,7 @@ h1 {
 main {
     background-color: rgba(212, 209, 209, 0.909);
     width: 100%;
+    padding-bottom: 110px;
 }
 
 section h2 {
@@ -263,12 +258,28 @@ main section ul li a {
 }
 
     /* Media Queries */
+    @media only screen and (max-width: 991px){
+        .nav-item {
+            border: 1px solid black;
+            
+        }
+        .navbar {
+            font-size: 20px;
+        }
+
+    }
 
     @media only screen and (max-width: 400px){
         .marcas {
             display: grid;
             grid-template-columns: 1fr;
             place-items: center;
+        }
+        .container-fluid {
+            padding-left: 0;
+        }
+        .navbar {
+            font-size: 20px;
         }
 
     }
@@ -280,5 +291,10 @@ main section ul li a {
             flex-wrap: wrap;
             margin-left: 10px;
             margin-right: 10px;
+        }
+        .container-fluid {
+            margin: 0;
+            padding-left: 0;
+            align-items: start;
         }
     }
