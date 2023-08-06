@@ -6,31 +6,24 @@
 }
 
 /* estilo de navbar */
-.nav {
+.navbar {
     display: flex;
-    justify-content: space-between;
     padding-right: 30px;
     background-image: url(../images/colornav.png);
     position: fixed;
     font-family: "zilla slab";
     font-size: 30px;
     width: 100%;
-    min-height: 80px;
+    max-height: 80px;
     z-index: 1;
 }
 
-.nav-enlaces {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}
 
 nav a {
     min-width: 120px;
 }
 
 header a img {
-    position: fixed;
     width: 120px;
 }
 
