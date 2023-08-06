@@ -80,7 +80,7 @@ footer a {
     flex-direction: column;
     margin-right: 0;
     padding-right: 0;
-    
+
 }
 
 /* Estilo de página de contacto */
@@ -95,10 +95,6 @@ footer a {
     text-align: left;
 }
 
-.contact-main {
-    padding-top: 1rem;
-}
-
 section form input,
 section form textarea {
     display: block;
@@ -108,7 +104,6 @@ section form textarea {
 
 .text-container {
     background-image: url(../images/cocina.webp);
-    padding-top: 80px;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -129,7 +124,6 @@ section form textarea {
 
 /* Otros formatos */
 h1 {
-    padding-top: 5rem;
     padding-left: 1rem;
 }
 
@@ -137,10 +131,10 @@ main {
     background-color: rgba(212, 209, 209, 0.909);
     width: 100%;
     padding-bottom: 110px;
+    padding-top: 75px;
 }
 
 section h2 {
-    padding-top: 7rem;
     font-family: "zilla slab";
     font-size: 35px;
 }
@@ -156,7 +150,6 @@ section iframe {
 }
 
 main p {
-    padding-top: 5rem;
     height: 100vh;
 }
 
@@ -166,24 +159,29 @@ h3 {
     font-weight: 900;
 }
 
+/* Formato de tienda */
 
 .productos {
     background-color: rgba(212, 209, 209, 0.909);
     display: flex;
     justify-content: space-between;
-    gap: 25px;
     flex-wrap: wrap;
-    padding: 6rem 3rem 6rem 3rem;
+    padding: 10px;
 }
 
 .lavarropas {
     background-color: rgba(212, 209, 209, 0.909);
     display: flex;
     flex-direction: column;
-    width: 30%;
+    max-width: 300px;
     border: 1px solid #191919;
     box-shadow: 5px 3px 10px 1px black;
     position: relative;
+    margin-bottom: 10px;
+}
+
+.imgtienda {
+    max-width: 300px;
 }
 
 ol {
@@ -205,12 +203,12 @@ ol {
     position: absolute;
     top: 10px;
     left: -10px;
-    height: 20px;
-    font-size: 100;
+    height: 40px;
 }
 
+/* Formato de Quienes somos */
+
 .quienessomosformato {
-    padding-top: 110px;
     text-align: justify;
     padding-right: 80px;
 }
@@ -226,7 +224,7 @@ section div img {
 }
 
 .nssection {
-    height: 100vh;
+    height: 70vh;
     margin-left: 40px;
 }
 
@@ -257,44 +255,66 @@ main section ul li a {
     background-color: blue;
 }
 
-    /* Media Queries */
-    @media only screen and (max-width: 991px){
-        .nav-item {
-            border: 1px solid black;
-            
-        }
-        .navbar {
-            font-size: 20px;
-        }
+/* Media Queries */
+@media only screen and (max-width: 991px) {
+    .nav-item {
+        border: 1px solid black;
 
     }
 
-    @media only screen and (max-width: 400px){
-        .marcas {
-            display: grid;
-            grid-template-columns: 1fr;
-            place-items: center;
-        }
-        .container-fluid {
-            padding-left: 0;
-        }
-        .navbar {
-            font-size: 20px;
-        }
+    .navbar {
+        font-size: 20px;
+    }
+
+    .productos {
+        display: flex;
+        justify-content: space-between;
 
     }
 
-    @media only screen and (min-width: 401px) {
-        .marcas {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-left: 10px;
-            margin-right: 10px;
-        }
-        .container-fluid {
-            margin: 0;
-            padding-left: 0;
-            align-items: start;
-        }
+}
+
+@media only screen and (max-width: 400px) {
+    .marcas {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
     }
+
+    .container-fluid {
+        padding-left: 0;
+    }
+
+    .navbar {
+        font-size: 20px;
+    }
+
+    .productos {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (min-width: 401px) {
+    .marcas {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .container-fluid {
+        margin: 0;
+        padding-left: 0;
+        align-items: start;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .productos {
+        display: flex;
+        justify-content: center;
+    }
+}
