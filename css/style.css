@@ -103,9 +103,10 @@ section form textarea {
 /* Formato de Index */
 
 .text-container {
-    background-image: url(../images/cocina.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(212, 209, 209, 0.909);
+
 }
 
 .marcas {
@@ -120,6 +121,32 @@ section form textarea {
     padding-top: 40px;
     max-width: 200px;
     max-height: 200px;
+}
+
+.atencion {
+    text-align: center;
+    font-family: "zilla slab";
+    font-size: 20px;
+}
+.zona-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 15px;
+    gap: 20px;
+}
+
+.zonas-cards {
+    border: 1px solid #191919;
+    box-shadow: 3px 1px 5px 1px black;
+    border-style: groove;
+    border-radius: 10%;
+    padding: 10px;
+}
+
+.zona-title {
+    text-align: center;
+    font-family: "zilla slab";
+    font-size: 20px;
 }
 
 /* Otros formatos */
@@ -139,24 +166,11 @@ section h2 {
     font-size: 35px;
 }
 
-section h3 {
-    font-family: "zilla slab";
-    font-size: 30px;
-    margin-left: 1rem;
-}
-
-section iframe {
-    margin-left: 1rem;
-}
-
-main p {
-    height: 100vh;
-}
-
 h3 {
     font-family: "zilla slab";
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 900;
+    padding-left: 10px;
 }
 
 /* Formato de tienda */
@@ -218,16 +232,21 @@ ol {
     height: 40px;
 }
 
+
+section div img {
+    height: 400px;
+}
+
 /* Formato de Quienes somos */
 
 .quienessomosformato {
     text-align: justify;
     padding-right: 80px;
 }
-
-section div img {
-    height: 400px;
+.somos-sec {
+    padding-left: 10px;
 }
+
 
 .nslist {
     padding-top: 2rem;
@@ -328,5 +347,11 @@ main section ul li a {
     .productos {
         display: flex;
         justify-content: center;
+    }
+    .zona-index {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 15px;
+        gap: 20px;
     }
 }
