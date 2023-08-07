@@ -166,7 +166,7 @@ section form textarea {
     padding-top: 0;
 }
 
-.btn {
+.btn-outline-dark {
     background-color: rgba(212, 209, 209, 0.909);
     color: #191919;
     border-color: #191919;
@@ -337,6 +337,7 @@ main section ul li a {
         justify-content: space-between;
 
     }
+
     .zona-index {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -406,10 +407,9 @@ main section ul li a {
         gap: 20px;
     }
 }
+
 @media only screen and (min-width:991px) {
     .zonas-cards {
         max-width: 25%;
     }
 }
-
-
