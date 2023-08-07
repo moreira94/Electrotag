@@ -49,11 +49,9 @@ footer {
     display: grid;
     grid-template-columns: 3fr 1fr;
     align-items: center;
-    position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 1;
-    max-height: 110px;
 }
 
 footer p {
@@ -100,11 +98,15 @@ section form textarea {
     display: block;
 }
 
+.contacto-hr {
+    padding-top: 100px;
+    margin-bottom: 0;
+}
+
 /* Formato de Index */
 
 .text-container {
     background-repeat: no-repeat;
-    background-size: cover;
     background-color: rgba(212, 209, 209, 0.909);
 
 }
@@ -128,18 +130,21 @@ section form textarea {
     font-family: "zilla slab";
     font-size: 20px;
 }
+
 .zona-index {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 15px;
     gap: 20px;
+    max-width: 100%;
+    justify-content: center;
 }
 
 .zonas-cards {
     border: 1px solid #191919;
     box-shadow: 3px 1px 5px 1px black;
     border-style: groove;
-    border-radius: 10%;
+    border-radius: 5%;
     padding: 10px;
 }
 
@@ -147,6 +152,33 @@ section form textarea {
     text-align: center;
     font-family: "zilla slab";
     font-size: 20px;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 400px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    background-color: #191919;
+    padding-top: 0;
+}
+
+.btn {
+    background-color: rgba(212, 209, 209, 0.909);
+    color: #191919;
+    border-color: #191919;
+    text-align: center;
+    font-family: "zilla slab";
+    font-size: 20px;
+}
+
+.card-body {
+    text-align: justify;
+    background-color: rgba(212, 209, 209, 0.909);
+    border: 0;
 }
 
 /* Otros formatos */
@@ -157,7 +189,6 @@ h1 {
 main {
     background-color: rgba(212, 209, 209, 0.909);
     width: 100%;
-    padding-bottom: 110px;
     padding-top: 75px;
 }
 
@@ -243,19 +274,23 @@ section div img {
     text-align: justify;
     padding-right: 80px;
 }
+
 .somos-sec {
     padding-left: 10px;
+    padding-top: 10vh;
 }
 
+/* Formato de nuestros servicios */
 
 .nslist {
-    padding-top: 2rem;
+    padding-top: 4rem;
     list-style: circle;
 
 }
 
 .nssection {
-    height: 70vh;
+    padding-top: 3rem;
+    height: 80vh;
     margin-left: 40px;
 }
 
@@ -301,6 +336,12 @@ main section ul li a {
         display: flex;
         justify-content: space-between;
 
+    }
+    .zona-index {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 15px;
+        gap: 20px;
     }
 
 }
@@ -348,13 +389,27 @@ main section ul li a {
         display: flex;
         justify-content: center;
     }
+
     .zona-index {
         display: grid;
         grid-template-columns: 1fr 1fr;
         margin: 15px;
         gap: 20px;
     }
-    footer {
-        position: relative;
+}
+
+@media only screen and (max-width: 690px) {
+    .zona-index {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 15px;
+        gap: 20px;
     }
 }
+@media only screen and (min-width:991px) {
+    .zonas-cards {
+        max-width: 25%;
+    }
+}
+
+
