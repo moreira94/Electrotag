@@ -103,6 +103,18 @@ section form textarea {
     margin-bottom: 0;
 }
 
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+    color: white;
+}
+
 /* Formato de Index */
 
 .text-container {
