@@ -1,0 +1,32 @@
+footer {
+    background-image: url(../images/colornav.png);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+footer p {
+    font-family: "zilla slab";
+    font-size: 15px;
+    color: white;
+    padding: 0;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+footer a {
+    font-family: "zilla slab";
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.enlaces-footer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    padding-right: 0;
+}

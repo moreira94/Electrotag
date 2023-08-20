@@ -4,38 +4,30 @@
   padding: 0;
 }
 
-.navbar {
-  display: flex;
-  padding-right: 30px;
-  background-image: url(../images/colornav.png);
-  position: fixed;
-  font-family: "zilla slab";
-  font-size: 30px;
+main {
+  background-color: rgba(212, 209, 209, 0.909);
   width: 100%;
-  max-height: 80px;
-  z-index: 1;
-  padding: 0;
+  padding-top: 75px;
 }
 
-.navbar-collapse {
-  background-image: url(../images/colornav.png);
-  justify-content: right;
+main section ul li a {
+  font-family: "zilla slab";
+  text-decoration: none;
+  font-size: 24px;
+  color: black;
 }
 
-nav a {
-  min-width: 120px;
-}
-nav ul {
-  list-style: none;
-}
-
-header a img {
-  width: 120px;
-}
-
-.container-fluid {
+h3 {
+  font-family: "zilla slab";
+  font-size: 22px;
+  font-weight: 900;
+  padding-left: 10px;
   margin: 0;
-  padding-left: 0;
+}
+
+ol {
+  list-style: none;
+  margin: 0;
 }
 
 footer {
@@ -47,6 +39,7 @@ footer {
   width: 100%;
   z-index: 1;
 }
+
 footer p {
   font-family: "zilla slab";
   font-size: 15px;
@@ -55,6 +48,7 @@ footer p {
   margin-left: 10px;
   margin-bottom: 0;
 }
+
 footer a {
   font-family: "zilla slab";
   font-size: 15px;
@@ -69,7 +63,46 @@ footer a {
   padding-right: 0;
 }
 
+.navbar {
+  display: flex;
+  padding-right: 30px;
+  background-image: url(../images/colornav.png);
+  position: fixed;
+  font-family: "zilla slab";
+  font-size: 24px;
+  width: 100%;
+  max-height: 80px;
+  z-index: 1;
+  padding: 0;
+}
+
+.navbar-collapse {
+  background-image: url(../images/colornav.png);
+  justify-content: right;
+}
+
+nav a {
+  min-width: 120px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+header a img {
+  width: 120px;
+}
+
+.container-fluid {
+  margin: 0;
+  padding-left: 0;
+}
+
 .contact {
+  padding-left: 1rem;
+}
+
+.titulo {
   padding-left: 1rem;
 }
 
@@ -82,13 +115,16 @@ footer a {
 section form input {
   display: block;
 }
+
 section form textarea {
   display: block;
 }
+
 section h2 {
   font-family: "zilla slab";
   font-size: 35px;
 }
+
 section div img {
   height: 400px;
 }
@@ -185,125 +221,6 @@ section div img {
   border: 0;
 }
 
-h1 {
-  padding-left: 1rem;
-}
-
-main {
-  background-color: rgba(212, 209, 209, 0.909);
-  width: 100%;
-  padding-top: 75px;
-}
-main section ul li a {
-  font-family: "zilla slab";
-  text-decoration: none;
-  font-size: 24px;
-  color: black;
-}
-
-h3 {
-  font-family: "zilla slab";
-  font-size: 30px;
-  font-weight: 900;
-  padding-left: 10px;
-}
-
-.productos {
-  background-color: rgba(212, 209, 209, 0.909);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 10px;
-  gap: 50px;
-}
-
-.lavarropas {
-  background-color: rgba(212, 209, 209, 0.909);
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  border: 1px solid #191919;
-  box-shadow: 5px 3px 10px 1px black;
-  position: relative;
-  margin-bottom: 10px;
-}
-
-.lavavajillas {
-  background-color: rgba(212, 209, 209, 0.909);
-  display: flex;
-  flex-direction: column;
-  max-width: 300px;
-  border: 1px solid #191919;
-  box-shadow: 5px 3px 10px 1px black;
-  position: relative;
-  margin-bottom: 10px;
-}
-
-.imgtienda {
-  max-width: 300px;
-}
-
-ol {
-  list-style: none;
-}
-
-.descripcion {
-  padding: 5px;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.oferta {
-  padding: 8px;
-  background-color: brown;
-  color: rgba(212, 209, 209, 0.909);
-  position: absolute;
-  top: 10px;
-  left: -10px;
-  height: 40px;
-}
-
-.quienessomosformato {
-  text-align: justify;
-  padding-right: 80px;
-}
-
-.somos-sec {
-  padding-left: 10px;
-  padding-top: 10vh;
-}
-
-.nslist {
-  padding-top: 4rem;
-  list-style: circle;
-}
-
-.nssection {
-  padding-top: 3rem;
-  height: 80vh;
-  margin-left: 40px;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.prueba {
-  width: 100%;
-  height: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 60px;
-}
-
-.c1 {
-  background-color: blue;
-}
-
 @media only screen and (max-width: 991px) {
   .nav-item {
     border: 1px solid black;
@@ -358,6 +275,9 @@ ol {
     display: flex;
     justify-content: center;
   }
+  .imgindex {
+    padding-right: 10px;
+  }
   .zona-index {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -377,4 +297,86 @@ ol {
   .zonas-cards {
     max-width: 25%;
   }
-}/*# sourceMappingURL=style.css.map */
+  .productos {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.nslist {
+  padding-top: 4rem;
+  list-style: circle;
+}
+
+.nssection {
+  height: 80vh;
+  margin-left: 40px;
+}
+
+.quienessomosformato {
+  text-align: justify;
+  padding-right: 80px;
+  padding-left: 10px;
+}
+
+.somos-sec {
+  padding-left: 10px;
+  padding-top: 10vh;
+}
+
+.productos {
+  background-color: rgba(212, 209, 209, 0.909);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 20px;
+}
+
+.lavarropas {
+  background-color: rgba(212, 209, 209, 0.909);
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  border: 1px solid #191919;
+  box-shadow: 5px 3px 10px 1px black;
+  position: relative;
+  height: 500px;
+}
+
+.lavavajillas {
+  background-color: rgba(212, 209, 209, 0.909);
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  border: 1px solid #191919;
+  box-shadow: 5px 3px 10px 1px black;
+  position: relative;
+  margin-bottom: 10px;
+  height: 500px;
+}
+
+.imgtienda {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.descripcion {
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.oferta {
+  padding: 8px;
+  background-color: brown;
+  color: rgba(212, 209, 209, 0.909);
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  height: 40px;
+}
+
+
+
+/*# sourceMappingURL=style.css.map */

@@ -1,14 +1,47 @@
+.contact {
+    padding-left: 1rem;
+}
+
+.titulo {
+    padding-left: 1rem;
+}
+
+.mb-3 {
+    width: 50%;
+    margin: 1rem;
+    text-align: left;
+}
+
+section form input {
+    display: block;
+}
+
+section form textarea {
+    display: block;
+}
+
+section h2 {
+    font-family: "zilla slab";
+    font-size: 35px;
+}
+
+section div img {
+    height: 400px;
+}
+
 .contacto-hr {
-	padding-top: 100px;
-	margin-bottom: 0;
+    padding-top: 100px;
+    margin-bottom: 0;
 }
+
 .btn-danger {
-	background-color: $background-color_1;
-	border-color: $border-color_1;
-	color: $color_1;
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
 }
+
 .btn-success {
-	background-color: $background-color_2;
-	border-color: $border-color_2;
-	color: $color_1;
+    background-color: #198754;
+    border-color: #198754;
+    color: white;
 }

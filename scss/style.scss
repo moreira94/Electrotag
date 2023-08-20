@@ -1,45 +1,13 @@
-@import url(../scss/layout/_mediaqueries.scss);
-@import url(../scss/base/_variable.scss);
-@import url(../scss/base/_reset.scss);
-@import url(../scss/layout/_index.scss);
-@import url(../scss/layout/_nav.scss);
-@import url(../scss/layout/_footer.scss);
-@import url(../scss/layout/_tienda.scss);
-@import url(../scss/layout/_quienessomos.scss);
-@import url(../scss/layout/_nuestrosservicios.scss);
-@import url(../scss/layout/_contacto.scss);
+@import "base/reset.scss";
+@import "base/variables.scss";
+@import "components/footer";
+@import "components/navbar";
+@import "layout/_contacto.scss";
+@import "layout/_index.scss";
+@import "layout/_mediaqueries.scss";
+@import "layout/_nuestrosservicios.scss";
+@import "layout/_quienessomos.scss";
+@import "layout/_tienda.scss";
 
 
-
-
-h1 {
-	padding-left: 1rem;
-}
-main {
-	background-color: $background-color_3;
-	width: 100%;   
-	padding-top: 75px;
-	section {
-		ul {
-			li {
-				a {
-					font-family: $font-family_1;
-					text-decoration: none;
-					font-size: 24px;
-					color: $color_4;
-				}
-			}
-		}
-	}
-}
-h3 {
-	font-family: $font-family_1;
-	font-size: 30px;
-	font-weight: 900;
-	padding-left: 10px;
-}
-ol {
-	list-style: none;
-}
-
-
+/*# sourceMappingURL=style.css.map */

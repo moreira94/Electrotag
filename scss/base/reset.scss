@@ -1,0 +1,32 @@
+@import "https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&family=Zilla+Slab&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: rgba(212, 209, 209, 0.909);
+    width: 100%;
+    padding-top: 75px;
+}
+
+main section ul li a {
+    font-family: "zilla slab";
+    text-decoration: none;
+    font-size: 24px;
+    color: black;
+}
+
+h3 {
+    font-family: "zilla slab";
+    font-size: 22px;
+    font-weight: 900;
+    padding-left: 10px;
+    margin: 0;
+}
+
+ol {
+    list-style: none;
+    margin: 0;
+}
