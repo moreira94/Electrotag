@@ -19,17 +19,14 @@
         margin: 15px;
         gap: 20px;
     }
-
-    .ns-card {
-        height: 400px;
+    .ns-description {
+        font-size: large;
     }
 }
 
 @media only screen and (max-width: 400px) {
     .marcas {
-        display: grid;
-        grid-template-columns: 1fr;
-        place-items: center;
+        @include flex;
     }
     
     .container-fluid {
@@ -45,8 +42,8 @@
         justify-content: center;
     }
 
-    .ns-card {
-        max-height: 200px;
+    .ns-description {
+        font-size: small;
     }
 }
 
@@ -64,6 +61,7 @@
         padding-left: 0;
         align-items: start;
     }
+
 }
 
 @media only screen and (max-width: 620px) {
@@ -86,13 +84,12 @@
 
 @media only screen and (max-width: 690px) {
     .zona-index {
-        display: grid;
-        grid-template-columns: 1fr;
+        @include flex;
         margin: 15px;
         gap: 20px;
     }
-    .ns-card {
-        height: 300px;
+    .zonas-cards {
+        width: 50%;
     }
 }
 

@@ -78,6 +78,10 @@ footer a {
   padding: 0;
 }
 
+.navbar-toggler {
+  border: 2px solid black;
+}
+
 .nav-link {
   color: white;
 }
@@ -129,10 +133,6 @@ section form textarea {
 section h2 {
   font-family: "zilla slab";
   font-size: 35px;
-}
-
-section div img {
-  height: 400px;
 }
 
 .contacto-hr {
@@ -212,6 +212,10 @@ section div img {
   padding-top: 0;
 }
 
+.img-carousel {
+  height: 400px;
+}
+
 .outline-dark {
   color: black;
   border-color: #191919;
@@ -243,15 +247,16 @@ section div img {
     margin: 15px;
     gap: 20px;
   }
-  .ns-card {
-    height: 400px;
+  .ns-description {
+    font-size: large;
   }
 }
 @media only screen and (max-width: 400px) {
   .marcas {
-    display: grid;
-    grid-template-columns: 1fr;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .container-fluid {
     padding-left: 0;
@@ -263,8 +268,8 @@ section div img {
     display: flex;
     justify-content: center;
   }
-  .ns-card {
-    max-height: 200px;
+  .ns-description {
+    font-size: small;
   }
 }
 @media only screen and (min-width: 401px) {
@@ -298,13 +303,15 @@ section div img {
 }
 @media only screen and (max-width: 690px) {
   .zona-index {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 15px;
     gap: 20px;
   }
-  .ns-card {
-    height: 300px;
+  .zonas-cards {
+    width: 50%;
   }
 }
 @media only screen and (min-width: 991px) {
@@ -343,7 +350,7 @@ section div img {
   background-color: #191919;
   font-size: 20px;
   width: 60%;
-  max-height: 500px;
+  height: 30%;
 }
 
 .ns-description {
