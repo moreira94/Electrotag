@@ -9,7 +9,6 @@ main {
   width: 100%;
   padding-top: 75px;
 }
-
 main section ul li a {
   font-family: "zilla slab";
   text-decoration: none;
@@ -30,14 +29,18 @@ ol {
   margin: 0;
 }
 
+h1 {
+  padding-top: 10px;
+}
+
 footer {
-  background-image: url(../images/colornav.png);
   display: grid;
   grid-template-columns: 3fr 1fr;
   align-items: center;
   bottom: 0;
   width: 100%;
   z-index: 1;
+  background-image: linear-gradient(120deg, rgb(52, 51, 51), rgb(0, 0, 0));
 }
 
 footer p {
@@ -66,7 +69,6 @@ footer a {
 .navbar {
   display: flex;
   padding-right: 30px;
-  background-image: url(../images/colornav.png);
   position: fixed;
   font-family: "zilla slab";
   font-size: 24px;
@@ -76,8 +78,11 @@ footer a {
   padding: 0;
 }
 
+.nav-link {
+  color: white;
+}
+
 .navbar-collapse {
-  background-image: url(../images/colornav.png);
   justify-content: right;
 }
 
@@ -96,6 +101,7 @@ header a img {
 .container-fluid {
   margin: 0;
   padding-left: 0;
+  background-image: linear-gradient(120deg, rgb(0, 0, 0), rgb(102, 100, 100));
 }
 
 .contact {
@@ -148,7 +154,6 @@ section div img {
 
 .text-container {
   background-repeat: no-repeat;
-  background-color: rgba(212, 209, 209, 0.909);
 }
 
 .marcas {
@@ -168,7 +173,8 @@ section div img {
 .atencion {
   text-align: center;
   font-family: "zilla slab";
-  font-size: 20px;
+  font-size: 30px;
+  padding-top: 20px;
 }
 
 .zona-index {
@@ -181,7 +187,7 @@ section div img {
 }
 
 .zonas-cards {
-  border: 1px solid #191919;
+  border: 1px #191919;
   box-shadow: 3px 1px 5px 1px black;
   border-style: groove;
   border-radius: 5%;
@@ -207,8 +213,7 @@ section div img {
 }
 
 .outline-dark {
-  background-color: rgba(212, 209, 209, 0.909);
-  color: #191919;
+  color: black;
   border-color: #191919;
   text-align: center;
   font-family: "zilla slab";
@@ -221,7 +226,7 @@ section div img {
   border: 0;
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 990px) {
   .nav-item {
     border: 1px solid black;
   }
@@ -237,6 +242,9 @@ section div img {
     grid-template-columns: 1fr 1fr;
     margin: 15px;
     gap: 20px;
+  }
+  .ns-card {
+    height: 400px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -254,6 +262,9 @@ section div img {
   .productos {
     display: flex;
     justify-content: center;
+  }
+  .ns-card {
+    max-height: 200px;
   }
 }
 @media only screen and (min-width: 401px) {
@@ -292,6 +303,9 @@ section div img {
     margin: 15px;
     gap: 20px;
   }
+  .ns-card {
+    height: 300px;
+  }
 }
 @media only screen and (min-width: 991px) {
   .zonas-cards {
@@ -308,8 +322,51 @@ section div img {
 }
 
 .nssection {
-  height: 80vh;
   margin-left: 40px;
+  padding-top: 20px;
+}
+
+.ns-cards {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-style: hidden;
+  gap: 50px;
+  justify-content: center;
+}
+
+.ns-card {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: #191919;
+  font-size: 20px;
+  width: 60%;
+  max-height: 500px;
+}
+
+.ns-description {
+  padding-top: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bi-cart4 {
+  display: flex;
+  justify-content: right;
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .quienessomosformato {
@@ -327,8 +384,12 @@ section div img {
   background-color: rgba(212, 209, 209, 0.909);
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
   gap: 20px;
+  transition: 0.3s;
 }
 
 .lavarropas {
@@ -340,6 +401,11 @@ section div img {
   box-shadow: 5px 3px 10px 1px black;
   position: relative;
   height: 500px;
+  transition: 0.3s;
+}
+.lavarropas:hover {
+  scale: 1.05;
+  box-shadow: 5px 3px 10px 1px black;
 }
 
 .lavavajillas {
@@ -352,6 +418,12 @@ section div img {
   position: relative;
   margin-bottom: 10px;
   height: 500px;
+  transition: 0.3s;
+}
+.lavavajillas:hover {
+  scale: 1.05;
+  box-shadow: 5px 3px 10px 1px black;
+  border: 2px solid #191919;
 }
 
 .imgtienda {
@@ -375,6 +447,16 @@ section div img {
   top: 10px;
   left: -10px;
   height: 40px;
+}
+
+.cart-tienda {
+  padding: 8px;
+  position: absolute;
+  background-color: #191919;
+  opacity: 0.8;
+  top: 244px;
+  right: 0px;
+  cursor: pointer;
 }
 
 

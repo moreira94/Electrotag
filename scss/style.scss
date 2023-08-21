@@ -1,7 +1,10 @@
-@import "base/reset.scss";
+//base
 @import "base/variables.scss";
+@import "base/reset.scss";
+//components
 @import "components/footer";
 @import "components/navbar";
+//layputs
 @import "layout/_contacto.scss";
 @import "layout/_index.scss";
 @import "layout/_mediaqueries.scss";

@@ -21,7 +21,7 @@ section form textarea {
 }
 
 section h2 {
-    font-family: "zilla slab";
+    font-family: $font-family_1;
     font-size: 35px;
 }
 
@@ -35,13 +35,13 @@ section div img {
 }
 
 .btn-danger {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    color: white;
+    background-color: $background-color_2;
+    border-color: $border-color_1;
+    color: $color_2;
 }
 
 .btn-success {
-    background-color: #198754;
-    border-color: #198754;
-    color: white;
+    background-color: $background-color_3;
+    border-color: $border-color_2;
+    color: $color_2;
 }

@@ -1,7 +1,8 @@
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 990px) {
     .nav-item {
         border: 1px solid black;
     }
+
 
     .navbar {
         font-size: 20px;
@@ -18,6 +19,10 @@
         margin: 15px;
         gap: 20px;
     }
+
+    .ns-card {
+        height: 400px;
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -26,7 +31,7 @@
         grid-template-columns: 1fr;
         place-items: center;
     }
-
+    
     .container-fluid {
         padding-left: 0;
     }
@@ -38,6 +43,10 @@
     .productos {
         display: flex;
         justify-content: center;
+    }
+
+    .ns-card {
+        max-height: 200px;
     }
 }
 
@@ -81,6 +90,9 @@
         grid-template-columns: 1fr;
         margin: 15px;
         gap: 20px;
+    }
+    .ns-card {
+        height: 300px;
     }
 }
 

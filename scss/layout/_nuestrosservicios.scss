@@ -4,6 +4,51 @@
 }
 
 .nssection {
-    height: 80vh;
     margin-left: 40px;
+    padding-top: 20px;
+}
+
+.ns-cards {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-style: hidden;
+    gap: 50px;
+    justify-content: center;
+    
+}
+
+.ns-card {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: $background-color_4;
+    font-size: 20px;
+    width: 60%;
+    max-height: 500px;
+}
+
+
+.ns-description {
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bi-cart4 {
+    display: flex;
+    justify-content: right;
+    text-decoration: none;
+    color: $color_2;
+    font-size: 40px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
 }

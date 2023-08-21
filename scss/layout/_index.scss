@@ -1,6 +1,5 @@
 .text-container {
     background-repeat: no-repeat;
-    background-color: rgba(212, 209, 209, 0.909);
 }
 
 .marcas {
@@ -19,8 +18,9 @@
 
 .atencion {
     text-align: center;
-    font-family: "zilla slab";
-    font-size: 20px;
+    font-family: $font-family_1;
+    font-size: 30px;
+    padding-top: 20px;
 }
 
 .zona-index {
@@ -33,7 +33,7 @@
 }
 
 .zonas-cards {
-    border: 1px solid #191919;
+    border: 1px $border-color_3;
     box-shadow: 3px 1px 5px 1px black;
     border-style: groove;
     border-radius: 5%;
@@ -42,7 +42,7 @@
 
 .zona-title {
     text-align: center;
-    font-family: "zilla slab";
+    font-family: $font-family_1;
     font-size: 20px;
 }
 
@@ -54,21 +54,20 @@
 .carousel {
     display: flex;
     justify-content: center;
-    background-color: #191919;
+    background-color: $background-color_4;
     padding-top: 0;
 }
 
 .outline-dark {
-    background-color: rgba(212, 209, 209, 0.909);
-    color: #191919;
-    border-color: #191919;
+    color: $color_1;
+    border-color: $border-color_3;
     text-align: center;
-    font-family: "zilla slab";
+    font-family: $font-family_1;
     font-size: 20px;
 }
 
 .card-body {
     text-align: justify;
-    background-color: rgba(212, 209, 209, 0.909);
+    background-color: $background-color_1;
     border: 0;
 }
