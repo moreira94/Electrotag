@@ -25,7 +25,6 @@
 
 .zona-index {
     display: flex;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 15px;
     gap: 20px;
     max-width: 100%;
@@ -38,6 +37,7 @@
     border-style: groove;
     border-radius: 5%;
     padding: 10px;
+    min-width: 185px;
 }
 
 .zona-title {

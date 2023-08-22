@@ -21,6 +21,7 @@
     position: relative;
     height: 500px;
     transition: .3s;
+
     &:hover {
         scale: 1.05;
         box-shadow: 5px 3px 10px 1px black;
@@ -38,6 +39,7 @@
     margin-bottom: 10px;
     height: 500px;
     transition: .3s;
+
     &:hover {
         scale: 1.05;
         box-shadow: 5px 3px 10px 1px black;
@@ -79,4 +81,14 @@
     top: 244px;
     right: 0px;
     cursor: pointer;
+}
+
+.arrow {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    font-size: 75px;
+    color: black;
+    margin: 25px;
 }

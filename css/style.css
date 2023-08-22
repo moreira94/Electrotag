@@ -179,7 +179,6 @@ section h2 {
 
 .zona-index {
   display: flex;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 15px;
   gap: 20px;
   max-width: 100%;
@@ -192,6 +191,7 @@ section h2 {
   border-style: groove;
   border-radius: 5%;
   padding: 10px;
+  min-width: 185px;
 }
 
 .zona-title {
@@ -311,7 +311,7 @@ section h2 {
     gap: 20px;
   }
   .zonas-cards {
-    width: 50%;
+    width: 80%;
   }
 }
 @media only screen and (min-width: 991px) {
@@ -321,6 +321,9 @@ section h2 {
   .productos {
     display: flex;
     justify-content: space-between;
+  }
+  .arrow {
+    display: none;
   }
 }
 .nslist {
@@ -385,6 +388,10 @@ a {
 .somos-sec {
   padding-left: 10px;
   padding-top: 10vh;
+}
+
+.quienes-main {
+  height: 100vh;
 }
 
 .productos {
@@ -464,6 +471,16 @@ a {
   top: 244px;
   right: 0px;
   cursor: pointer;
+}
+
+.arrow {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 75px;
+  color: black;
+  margin: 25px;
 }
 
 

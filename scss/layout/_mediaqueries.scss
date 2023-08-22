@@ -89,7 +89,7 @@
         gap: 20px;
     }
     .zonas-cards {
-        width: 50%;
+        width: 80%;
     }
 }
 
@@ -100,5 +100,8 @@
     .productos {
         display: flex;
         justify-content: space-between;
+    }
+    .arrow {
+        display: none;
     }
 }
