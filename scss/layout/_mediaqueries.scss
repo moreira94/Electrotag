@@ -80,6 +80,16 @@
         margin: 15px;
         gap: 20px;
     }
+
+    .footer-enlaces {
+        @include flex;
+    }
+
+    .enlaces-footer {
+        text-align: justify;
+        margin-right: 150px;
+    }
+
 }
 
 @media only screen and (max-width: 690px) {
