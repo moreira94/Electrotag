@@ -1,19 +1,30 @@
 .text-container {
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+
+    p {
+        width: 80%;
+        font-family: $font-family_1;
+        font-size: 22px;
+        font-weight: 900;
+    }
+
 }
 
 .marcas {
     justify-content: space-between;
     width: 98%;
-}
 
-.imgindex {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 10px;
-    padding-top: 40px;
-    max-width: 200px;
-    max-height: 200px;
+    .imgindex {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+        padding-top: 40px;
+        max-width: 200px;
+        max-height: 200px;
+    }
 }
 
 .atencion {
@@ -29,26 +40,35 @@
     gap: 20px;
     max-width: 100%;
     justify-content: center;
-}
 
-.zonas-cards {
-    border: 1px $border-color_3;
-    box-shadow: 3px 1px 5px 1px black;
-    border-style: groove;
-    border-radius: 5%;
-    padding: 10px;
-    min-width: 185px;
-}
+    .zonas-cards {
+        border: 1px $border-color_3;
+        box-shadow: 3px 1px 5px 1px black;
+        border-style: groove;
+        border-radius: 5%;
+        padding: 10px;
+        min-width: 185px;
 
-.zona-title {
-    text-align: center;
-    font-family: $font-family_1;
-    font-size: 20px;
-}
+        .zona-title {
+            text-align: center;
+            font-family: $font-family_1;
+            font-size: 20px;
 
-.carousel-inner {
-    display: flex;
-    width: 400px;
+            .outline-dark {
+                color: $color_1;
+                border-color: $border-color_3;
+                text-align: center;
+                font-family: $font-family_1;
+                font-size: 20px;
+            }
+        }
+
+        .card-body {
+            text-align: justify;
+            background-color: $background-color_1;
+            border: 0;
+        }
+    }
 }
 
 .carousel {
@@ -56,22 +76,13 @@
     justify-content: center;
     background-color: $background-color_4;
     padding-top: 0;
-}
 
-.img-carousel {
-    height: 400px;
-}
+    .carousel-inner {
+        display: flex;
+        width: 400px;
 
-.outline-dark {
-    color: $color_1;
-    border-color: $border-color_3;
-    text-align: center;
-    font-family: $font-family_1;
-    font-size: 20px;
-}
-
-.card-body {
-    text-align: justify;
-    background-color: $background-color_1;
-    border: 0;
+        .img-carousel {
+            height: 400px;
+        }
+    }
 }

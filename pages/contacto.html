@@ -11,6 +11,8 @@
     <!--Link a Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--Link a biblioteca de efectos AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!--Link al css-->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../images/minilogo.png" type="image/x-icon">
@@ -48,45 +50,48 @@
             </div>
         </nav>
     </header>
-
+<!--Inicio del cuerpo-->
     <main>
         <section class="contact-main">
-            <h1 class="titulo">Contacto</h1>
+            <section class="formulario" data-aos="flip-down" data-aos-duration="1000">
+                <h1 class="titulo">Contacto</h1>
 
-            <form action="" method="get" class="contact">
-                <div class="mb-3">
-                    <label for="formGroupExampleInput" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese su Nombre">
-                </div>
-                <div class="mb-3">
-                    <label for="formGroupExampleInput2" class="form-label">Mail</label>
-                    <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese su Mail"
-                        required>
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                        placeholder="Mensaje"></textarea>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                    <label class="form-check-label" for="flexCheckChecked">
-                        ¿Desea recibir ofertas y promociones por mail?
-                    </label>
-                </div>
-                <div class="Buttons">
-                    <button type="submit" class="btn btn-success">Enviar</button>
-                    <button type="reset" class="btn btn-danger">Limpiar formulario</button>
-                </div>
-            </form>
+                <form action="" method="get" class="contact">
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput"
+                            placeholder="Ingrese su Nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2" class="form-label">Mail</label>
+                        <input type="email" class="form-control" id="formGroupExampleInput2"
+                            placeholder="Ingrese su Mail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                            placeholder="Mensaje"></textarea>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">
+                            ¿Desea recibir ofertas y promociones por mail?
+                        </label>
+                    </div>
+                    <div class="Buttons">
+                        <button type="submit" class="btn btn-success">Enviar</button>
+                        <button type="reset" class="btn btn-danger">Limpiar formulario</button>
+                    </div>
+                </form>
+            </section>
         </section>
-        <section>
-            <h2 class="contacto-hr">Nuestro horario de atención es de lunes a viernes de 08:00 a 19:00 hs. y sábados de
+        <section class="contacto-hr">
+            <h2>Nuestro horario de atención es de lunes a viernes de 08:00 a 19:00 hs. y sábados de
                 08:00 a 13:00hs.
             </h2>
         </section>
     </main>
-
+<!--footer-->
     <footer>
         <section class="footer-enlaces">
             <section>
@@ -117,10 +122,16 @@
             <p>Copyright © Electrotag 2023. All rights reserved</p>
         </section>
     </footer>
-
+<!--Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
 
 
 </body>

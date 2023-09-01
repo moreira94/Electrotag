@@ -19,6 +19,7 @@
         margin: 15px;
         gap: 20px;
     }
+
     .ns-description {
         font-size: large;
     }
@@ -28,7 +29,7 @@
     .marcas {
         @include flex;
     }
-    
+
     .container-fluid {
         padding-left: 0;
     }
@@ -90,6 +91,12 @@
         margin-right: 150px;
     }
 
+    form.contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 @media only screen and (max-width: 690px) {
@@ -98,8 +105,22 @@
         margin: 15px;
         gap: 20px;
     }
+
     .zonas-cards {
         width: 80%;
+    }
+
+    .quienessomosformato {
+        @include flex;
+        padding: 10px;
+    }
+
+    .somos-sec {
+        @include flex;
+    }
+
+    .formulario {
+        width: 90%;
     }
 }
 
@@ -107,11 +128,17 @@
     .zonas-cards {
         max-width: 25%;
     }
+
     .productos {
         display: flex;
         justify-content: space-between;
     }
+
     .arrow {
         display: none;
+    }
+
+    .quienessomosformato {
+        @include flex;
     }
 }
