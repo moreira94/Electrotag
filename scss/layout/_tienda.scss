@@ -22,7 +22,7 @@
 
         &:hover {
             scale: 1.05;
-            box-shadow: 5px 3px 10px 1px black;
+            box-shadow: 10px 3px 10px 1px black;
         }
 
         .imgtienda {
@@ -71,10 +71,9 @@
 
 .arrow {
     position: fixed;
-    bottom: 0;
+    bottom: 200px;
     right: 0;
     cursor: pointer;
     font-size: 75px;
-    color: grey;
-    margin: 25px;
+    color: black;
 }
