@@ -1,5 +1,4 @@
 .quienes-main {
-    height: 120vh;
 
     .quienessomosformato {
         text-align: justify;
@@ -19,5 +18,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 100px;
+        h2 {
+            padding-bottom: 50px;
+        }
     }
 }
