@@ -34,7 +34,7 @@ h1 {
   padding-top: 10px;
 }
 
-footer {
+.footer {
   bottom: 0;
   width: 100%;
   z-index: 1;
@@ -42,33 +42,33 @@ footer {
   padding-left: 3px;
   padding-right: 3px;
 }
-footer .footer-enlaces {
+.footer .footer-enlaces {
   display: grid;
   grid-template-columns: 3fr 1fr;
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
 }
-footer .footer-enlaces .enlaces-footer {
+.footer .footer-enlaces .enlaces-footer {
   display: flex;
   flex-direction: column;
   margin-right: 0;
   padding-right: 0;
 }
-footer .footer-enlaces .enlaces-footer a {
+.footer .footer-enlaces .enlaces-footer a {
   font-family: "zilla slab";
   font-size: 17px;
   color: white;
   text-decoration: none;
 }
-footer p {
+.footer p {
   font-family: "zilla slab";
   font-size: 17px;
   color: white;
   padding: 0;
   margin-bottom: 0;
 }
-footer .copyright {
+.footer .copyright {
   display: flex;
   border-top-width: 2px;
   border-style: solid;
@@ -115,6 +115,18 @@ footer .copyright {
 }
 .navbar a {
   min-width: 120px;
+}
+
+#mode-select {
+  padding: 3px;
+  height: 80px;
+  border: 0;
+  color: white;
+  background-color: transparent;
+}
+
+.modo-river {
+  background-image: linear-gradient(120deg, rgb(248, 2, 2), rgb(247, 244, 244)) !important;
 }
 
 .contact-main {
@@ -517,6 +529,18 @@ form textarea {
   cursor: pointer;
   font-size: 60px;
   color: black;
+}
+
+.filter-button {
+  background-color: #191919;
+  color: white;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.filter {
+  display: flex;
+  padding-top: 15px;
 }
 
 

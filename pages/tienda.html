@@ -25,6 +25,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="img-logo" href="../index.html"><img src="../images/logo.png" alt="Imagen Logo"></a>
+                <button id="mode-select">Estilo River</button>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -33,16 +34,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="nuestrosservicios.html">NUESTROS SERVICIOS</a>
+                            <a class="nav-link" href="../pages/nuestrosservicios.html">NUESTROS SERVICIOS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="quienessomos.html">¿QUIENES SOMOS?</a>
+                            <a class="nav-link" href="../pages/quienessomos.html">¿QUIENES SOMOS?</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">CONTACTO</a>
+                            <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="tienda.html">TIENDA</a>
+                            <a class="nav-link" href="../pages/tienda.html">TIENDA</a>
                     </ul>
                 </div>
             </div>
@@ -50,6 +51,12 @@
     </header>
 <!--Cuerpo de la página-->
     <main>
+        <section class="filter">
+            <h3>Filtrar prouctos por:
+            </h3>
+                <button class="filter-button">Lavarropas</button>
+                <button class="filter-button">Lavavajillas</button>
+        </section>
         <section class="productos">
             <div class="lavarropas">
                 <img class="imgtienda" src="../images/lgf1400td.png" alt="Lavarropas LG">
@@ -164,9 +171,10 @@
                     <i class="cart-tienda bi bi-cart4"></i>
                 </div>
             </div>
+        
     </main>
 <!--Footer-->
-    <footer>
+    <footer class="footer">
         <section class="footer-enlaces">
             <section>
                 <div>
@@ -201,6 +209,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+
 
 </body>
 
