@@ -120,8 +120,10 @@ h1 {
 #mode-select {
   padding: 3px;
   height: 80px;
-  border: 0;
+  border: 1 solid;
+  border-color: white;
   color: white;
+  border-radius: 20%;
   background-color: transparent;
 }
 
@@ -139,6 +141,12 @@ h1 {
 }
 .modo-river p {
   color: black;
+}
+.modo-river #mode-select {
+  border-color: black;
+}
+.modo-river .copyright {
+  border-top-color: black;
 }
 
 .contact-main {
@@ -553,6 +561,7 @@ form textarea {
 .filter {
   display: flex;
   padding-top: 15px;
+  padding-right: 10px;
 }
 
 
