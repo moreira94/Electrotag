@@ -45,7 +45,6 @@ if (estiloRiver === "activado") {
     desactivarModoColor();
 };
 
-
 const productos = [
     {
         id: "lava-01",
@@ -57,7 +56,7 @@ const productos = [
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: 180.000
+        precio: 180.000,
     },
     {
         id: "lava-02",
@@ -69,7 +68,7 @@ const productos = [
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: 140.000
+        precio: 140.000,
 
     },
     {
@@ -82,7 +81,7 @@ const productos = [
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: 125.000
+        precio: 125.000,
 
     },
     {
@@ -95,7 +94,7 @@ const productos = [
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: 108.200
+        precio: 108.200,
 
     },
     {
@@ -108,7 +107,7 @@ const productos = [
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: 135.000
+        precio: 135.000,
 
     },
     {
@@ -121,7 +120,7 @@ const productos = [
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: 160.000
+        precio: 160.000,
 
     },
     {
@@ -134,7 +133,7 @@ const productos = [
             nombre: "Lavavajillas",
             id: "lavavajillas"
         },
-        precio: 190.000
+        precio: 190.000,
 
     },
     {
@@ -147,16 +146,19 @@ const productos = [
             nombre: "Lavavajillas",
             id: "lavavajillas"
         },
-        precio: 180.000
+        precio: 180.000,
 
     }
 ];
 
+console.log(productos)
+
 const productConteiner = document.querySelector(".productos");
 
-function cargaProductos() {
+function cargaProductos(productosSeleccionados) {
 
-    productos.foreach(producto => {
+    productConteiner.innerHTML = ""
+    productosSeleccionados.forEach(producto => {
 
         const div = document.createElement("div");
         div.classList.add("lavarropas");
@@ -175,8 +177,26 @@ function cargaProductos() {
     })
 }
 
-cargaProductos()
+cargaProductos(productos)
 
+const lavarropas = document.querySelector("#lavarropas")
+const lavavajillas = document.querySelector("#lavavajillas")
+const botonFiltro = document.querySelectorAll(".filter-button")
+
+botonFiltro.forEach(boton => {
+    boton.addEventListener("click", (e) => {
+        botonFiltro.forEach(boton => boton.classList.remove("active"))
+        e.currentTarget.classList.add("active")
+
+        if(e.currentTarget.id != "todos"){
+        const productosSeleccion = productos.filter(producto => producto.categoria.id === e.currentTarget.id );
+        cargaProductos(productosSeleccion)
+        } else {
+            cargaProductos(productos)
+        }
+
+    })
+})
 
 
 
