@@ -11,7 +11,7 @@ function activarModoColor() {
     footer.classList.add("modo-river");
     localStorage.setItem("modo-river", "activado");
     if (nav.classList.contains("modo-river")) {
-        modeSelectButton.innerText = "Estilo común";
+        modeSelectButton.innerText = "Estilo Clásico";
     } else {
         modeSelectButton.innerText = "Estilo River";
     }
@@ -22,7 +22,7 @@ function desactivarModoColor() {
     footer.classList.remove("modo-river");
     localStorage.setItem("modo-river", "desactivado");
     if (nav.classList.contains("modo-river")) {
-        modeSelectButton.innerText = "Estilo común";
+        modeSelectButton.innerText = "Estilo Clásico";
     } else {
         modeSelectButton.innerText = "Estilo River";
     }
