@@ -559,7 +559,7 @@ form textarea {
 }
 
 .filter {
-  display: flex;
+  display: inline-block;
   padding-top: 15px;
   padding-right: 10px;
 }
