@@ -564,6 +564,34 @@ form textarea {
   padding-right: 10px;
 }
 
+.carrito-tienda {
+  display: grid;
+  grid-template-rows: 4fr;
+  position: fixed;
+  bottom: 100px;
+  left: 10px;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+  border: 2px solid;
+  border-color: black;
+  background-color: rgba(212, 209, 209, 0.909);
+}
+.carrito-tienda .checkout-button {
+  background-color: #191919;
+  grid-row: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  max-height: 40px;
+  color: green;
+}
+
+.hidden {
+  display: none;
+}
+
 
 
 /*# sourceMappingURL=style.css.map */

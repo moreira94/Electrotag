@@ -44,6 +44,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/tienda.html">TIENDA</a>
+                        <li style="cursor: pointer" id="carrito-icon" class="bi-cart nav-link"></li>
                     </ul>
                 </div>
             </div>
@@ -56,12 +57,18 @@
             </h3>
                 <button id="lavarropas" class="filter-button">Lavarropas</button>
                 <button id="lavavajillas" class="filter-button">Lavavajillas</button>
+                <button id="secarropas" class="filter-button">Secarropas</button>
                 <button id="todos" class="filter-button">Todos los productos</button>
 
         </section>
         <section class="productos">
         </section>
-        
+        <div class="carrito-tienda hidden">
+            <div class="carrito-productos"></div>
+            <a href="checkout.html" class="checkout-button">
+                <p>Finalizar compra</p>
+            </a>
+        </div>
     </main>
 <!--Footer-->
     <footer class="footer">

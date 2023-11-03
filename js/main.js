@@ -4,8 +4,6 @@ const footer = document.querySelector(".footer")
 let estiloRiver = localStorage.getItem("modo-river")
 
 
-
-
 function activarModoColor() {
     nav.classList.add("modo-river");
     footer.classList.add("modo-river");
@@ -47,6 +45,18 @@ if (estiloRiver === "activado") {
 
 const productos = [
     {
+        id: "seca-01",
+        titulo: "Secarropas Ariston AQCF 852 BU",
+        imagen: "../images/seca-ariston.webp",
+        carga: "8Kg",
+        caracteristica: "Secado por condensación",
+        categoria: {
+            nombre: "Secarropas",
+            id: "secarropas"
+        },
+        precio: "$280.000",
+    },
+    {
         id: "lava-01",
         titulo: "Lavarropas LG F1400TD",
         imagen: "../images/lgf1400td.png",
@@ -56,75 +66,48 @@ const productos = [
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: 180.000,
+        precio: "$320.000",
+    },
+    {
+        id: "lavavaj-01",
+        titulo: "Lavavajillas Whirlpool WLF12AB",
+        imagen: "../images/lavavaj-whirlpool.webp",
+        carga: "12 Cubiertos",
+        caracteristica: "Cantidad de programas: 8",
+        categoria: {
+            nombre: "Lavavajillas",
+            id: "lavavajillas"
+        },
+        precio: "$290.000",
     },
     {
         id: "lava-02",
         titulo: "Lavarropas GE GELVGE08e12",
         imagen: "../images/gelvge07e12b.png",
-        carga: "7 KG",
+        carga: "7Kg",
         caracteristica: "Velocidad de Centrifugado: 1200RPM",
         categoria: {
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: 140.000,
+        precio: "$220.000",
 
     },
     {
         id: "lava-03",
         titulo: "Lavarropas Candy GV108t12",
         imagen: "../images/candygv108t12.png",
-        carga: "8KG",
+        carga: "8Kg",
         caracteristica: "Velocidad de Centrifugado: 1000RPM",
         categoria: {
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: 125.000,
+        precio: "$190.000",
 
     },
     {
-        id: "lava-04",
-        titulo: "Lavarropas ELECTROLUX ELAC209W",
-        imagen: "../images/electroluxelac209w.png",
-        carga: "9KG",
-        caracteristica: "Velocidad de Centrifugado: 750RPM",
-        categoria: {
-            nombre: "Lavarropas",
-            id: "lavarropas"
-        },
-        precio: 108.200,
-
-    },
-    {
-        id: "lava-05",
-        titulo: "Lavarropas Drean Gold Blue 8.6",
-        imagen: "../images/dreangoldblue86.png",
-        carga: "6KG",
-        caracteristica: "Velocidad de Centrifugado: 800RPM",
-        categoria: {
-            nombre: "Lavarropas",
-            id: "lavarropas"
-        },
-        precio: 135.000,
-
-    },
-    {
-        id: "lava-06",
-        titulo: "Lavarropas Gafa Modelo 7500",
-        imagen: "../images/gafa7500.png",
-        carga: "6KG",
-        caracteristica: "Velocidad de Centrifugado: 800RPM",
-        categoria: {
-            nombre: "Lavarropas",
-            id: "lavarropas"
-        },
-        precio: 160.000,
-
-    },
-    {
-        id: "lavavaj-01",
+        id: "lavavaj-02",
         titulo: "Lavavajillas Samsung Modelo DW-FN320W",
         imagen: "../images/lavavajsamsung.png",
         carga: "12 cubiertos",
@@ -133,11 +116,50 @@ const productos = [
             nombre: "Lavavajillas",
             id: "lavavajillas"
         },
-        precio: 190.000,
+        precio: "$420.000",
 
     },
     {
-        id: "lavavaj-02",
+        id: "lava-04",
+        titulo: "Lavarropas ELECTROLUX ELAC209W",
+        imagen: "../images/electroluxelac209w.png",
+        carga: "9Kg",
+        caracteristica: "Velocidad de Centrifugado: 750RPM",
+        categoria: {
+            nombre: "Lavarropas",
+            id: "lavarropas"
+        },
+        precio: "$210.000",
+
+    },
+    {
+        id: "lava-05",
+        titulo: "Lavarropas Drean Gold Blue 8.6",
+        imagen: "../images/dreangoldblue86.png",
+        carga: "6Kg",
+        caracteristica: "Velocidad de Centrifugado: 800RPM",
+        categoria: {
+            nombre: "Lavarropas",
+            id: "lavarropas"
+        },
+        precio: "$170.000",
+
+    },
+    {
+        id: "lava-06",
+        titulo: "Lavarropas Gafa Modelo 7500",
+        imagen: "../images/gafa7500.png",
+        carga: "6Kg",
+        caracteristica: "Velocidad de Centrifugado: 800RPM",
+        categoria: {
+            nombre: "Lavarropas",
+            id: "lavarropas"
+        },
+        precio: "$230.000",
+
+    },
+    {
+        id: "lavavaj-03",
         titulo: "Lavavajillas Ariston LKF71",
         imagen: "../images/lavavajariston.png",
         carga: "14 cubiertos",
@@ -146,7 +168,7 @@ const productos = [
             nombre: "Lavavajillas",
             id: "lavavajillas"
         },
-        precio: 180.000,
+        precio: "$380.000,"
 
     }
 ];
@@ -171,7 +193,7 @@ function cargaProductos(productosSeleccionados) {
                 <li>${producto.carga}</li>
                 <li>${producto.caracteristica}</li>
             </ol>
-            <i class="cart-tienda bi bi-cart4"></i>
+            <i id=${producto.id} class="cart-tienda bi bi-cart4 agregar-producto"></i>
         </div>`;
         productConteiner.append(div);
     })
@@ -198,7 +220,41 @@ botonFiltro.forEach(boton => {
     })
 })
 
+let botonCarrito = document.querySelector("#carrito-icon")
+let carritoTienda = document.querySelector(".carrito-tienda")
 
+function abrirCarrito () {
+    carritoTienda.classList.toggle ("hidden");
+}
+
+botonCarrito.addEventListener ("click", () => {
+    abrirCarrito()
+})
+
+function carritoLog () {
+    localStorage.setItem("producto", JSON.stringify(productos))
+}
+
+carritoLog()
+
+// let productosSeleccionados = localStorage.getItem("producto");
+// const productosEnCarrito = []
+// botonAgregar = document.querySelectorAll(".agregar-producto");
+
+
+// function agregarBoton () {
+//     botonAgregar = document.querySelector(".agregar-producto");
+//     botonAgregar.forEach(boton => {
+//         boton.addEventListener("click", agregarAlCarrito);
+//     });
+// };
+
+// function agregarAlCarrito (e) {
+//     const botonId = e.currentTarget.id;
+//     console.log(botonId)
+//     const productoListo = productos.find(producto => producto.id === botonId)
+//     console.log(productoListo)
+// }
 
 
 
