@@ -8,6 +8,7 @@ main {
   background-color: rgba(212, 209, 209, 0.909);
   width: 100%;
   padding-top: 75px;
+  min-height: 700px;
 }
 main section ul li a {
   font-family: "zilla slab";
@@ -114,7 +115,10 @@ h1 {
   list-style: none;
 }
 .navbar a {
-  min-width: 120px;
+  min-width: 100px;
+}
+.navbar #carrito-icon {
+  padding-right: 10px;
 }
 
 #mode-select {

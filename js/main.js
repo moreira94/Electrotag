@@ -176,6 +176,8 @@ const productos = [
 console.log(productos)
 
 const productConteiner = document.querySelector(".productos");
+let botonAgregarItem = document.querySelectorAll(".agregar-producto")
+
 
 function cargaProductos(productosSeleccionados) {
 
@@ -197,6 +199,7 @@ function cargaProductos(productosSeleccionados) {
         </div>`;
         productConteiner.append(div);
     })
+    actualizarBotonAgregarItem ()
 }
 
 cargaProductos(productos)
@@ -231,30 +234,30 @@ botonCarrito.addEventListener ("click", () => {
     abrirCarrito()
 })
 
-function carritoLog () {
-    localStorage.setItem("producto", JSON.stringify(productos))
+function actualizarBotonAgregarItem () {
+    botonAgregarItem = document.querySelectorAll(".agregar-producto");
+    botonAgregarItem.forEach(boton => {
+        boton.addEventListener("click", agregarAlCarrito);
+    });
+};
+
+const productosEnCarrito = [];
+const carritoDeProductos = document.querySelector(".carrito-productos");
+
+
+
+function agregarAlCarrito (e) {
+    const botonId = e.currentTarget.id;
+    const productoListo = productos.find(producto => producto.id === botonId);
+    if(productosEnCarrito.some(producto => producto.id === botonId)) {
+        alert("El producto ya esta en el carrito");
+    } else{
+    productosEnCarrito.push(productoListo);
+    localStorage.setItem("Productos", JSON.stringify(productosEnCarrito));
+    console.log(productosEnCarrito);
+}
 }
 
-carritoLog()
-
-// let productosSeleccionados = localStorage.getItem("producto");
-// const productosEnCarrito = []
-// botonAgregar = document.querySelectorAll(".agregar-producto");
-
-
-// function agregarBoton () {
-//     botonAgregar = document.querySelector(".agregar-producto");
-//     botonAgregar.forEach(boton => {
-//         boton.addEventListener("click", agregarAlCarrito);
-//     });
-// };
-
-// function agregarAlCarrito (e) {
-//     const botonId = e.currentTarget.id;
-//     console.log(botonId)
-//     const productoListo = productos.find(producto => producto.id === botonId)
-//     console.log(productoListo)
-// }
 
 
 

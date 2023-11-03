@@ -38,12 +38,16 @@
         }
     }
 
+
     ul {
         list-style: none;
     }
 
     a {
-        min-width: 120px;
+        min-width: 100px;
+    }
+    #carrito-icon {
+        padding-right: 10px;
     }
 
 }
@@ -79,3 +83,4 @@
         border-top-color: $color_1 ;
 }
 }
+
