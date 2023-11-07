@@ -1,3 +1,4 @@
+//Estilos de pagina//
 const modeSelectButton = document.querySelector("#mode-select");
 const nav = document.querySelector(".container-fluid")
 const footer = document.querySelector(".footer")
@@ -43,6 +44,8 @@ if (estiloRiver === "activado") {
     desactivarModoColor();
 };
 
+// Boton para abrir carrito//
+
 let botonCarrito = document.querySelector("#carrito-icon")
 let carritoTienda = document.querySelector(".carrito-tienda")
 
@@ -53,6 +56,8 @@ function abrirCarrito() {
 botonCarrito.addEventListener("click", () => {
     abrirCarrito()
 })
+
+//Array de productos //
 
 const productos = [
     {
@@ -184,11 +189,10 @@ const productos = [
     }
 ];
 
-console.log(productos)
-
 const productConteiner = document.querySelector(".productos");
 let botonAgregarItem = document.querySelectorAll(".agregar-producto")
 
+cargaProductos(productos)
 
 function cargaProductos(productosSeleccionados) {
 
@@ -213,7 +217,7 @@ function cargaProductos(productosSeleccionados) {
     actualizarBotonAgregarItem()
 }
 
-cargaProductos(productos)
+//Filtro de productos de la página//
 
 const lavarropas = document.querySelector("#lavarropas")
 const lavavajillas = document.querySelector("#lavavajillas")
@@ -234,8 +238,10 @@ botonFiltro.forEach(boton => {
     })
 })
 
-let productosEnCarrito = [];
-const carritoDeProductos = document.querySelector(".carrito-productos");
+let productosEnCarrito = JSON.parse(localStorage.getItem("Productos"));
+if (!productosEnCarrito) {
+    productosEnCarrito = []
+}
 
 
 function actualizarBotonAgregarItem() {
@@ -248,12 +254,38 @@ function actualizarBotonAgregarItem() {
 function agregarAlCarrito(e) {
     const botonId = e.currentTarget.id;
     const productoListo = productos.find(producto => producto.id === botonId);
-    let productosCarriteados = JSON.parse(localStorage.getItem("Productos"));
-    productosCarriteados.some(producto => producto.id === botonId) ? alert("El producto ya esta en el carrito") : productosEnCarrito.push(productoListo) && console.log(productosEnCarrito);
+    productosEnCarrito.some(producto => producto.id === botonId) ? alert("El producto ya esta en el carrito") : productosEnCarrito.push(productoListo) && console.log(productosEnCarrito);
     localStorage.setItem("Productos", JSON.stringify(productosEnCarrito));
-    productosEnCarrito = JSON.parse(localStorage.getItem("Productos"))
+    productosEnCarrito = JSON.parse(localStorage.getItem("Productos"));
+    sumarAlCarrito()
 }
 
+const carritoDeProductos = document.querySelector(".carrito-productos");
+function sumarAlCarrito() {
+    carritoDeProductos.innerHTML = ""
+    productosEnCarrito.forEach(producto => {
+
+        const div = document.createElement("div");
+        div.classList.add("carrito-producto");
+        div.innerHTML = `
+        <div class="artefacto-carrito">${producto.titulo}</div>
+        <div class="precio-carrito">${producto.precio}
+        </div>`;
+        carritoDeProductos.append(div);
+    })
+}
+
+//Boton de reset de carrito//
+
+let botonReset = document.querySelector(".vaciar-carrito")
+
+function resetCarrito() {
+    productosEnCarrito = []
+    localStorage.setItem("Productos", 0)
+    carritoDeProductos.innerHTML=""
+}
+
+botonReset.addEventListener("click", resetCarrito)
 
 
 

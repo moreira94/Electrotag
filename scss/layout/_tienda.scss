@@ -99,8 +99,8 @@
     position: fixed;
     bottom: 100px;
     left: 10px;
-    width: 400px;
-    height: 200px;
+    max-width: 600px;
+    max-height: 600px;
     border-radius: 10px;
     border: 2px solid;
     border-color: $color_1;
@@ -112,13 +112,28 @@
         justify-content: center;
         align-items: center;
         text-decoration: none;
-        max-height: 40px;
+        height: 40px;
         color: green;
+    }
+    .vaciar-carrito {
+        color: red;
     }
 }
 
 .hidden {
     display: none;
 }
+
+.carrito-productos, .total-carrito  {
+    padding-left: 10px;
+    padding-right: 5px;
+    font-size: 20px;
+    display:flex;
+    flex-direction: column;
+    .precio-carrito {
+        padding-left: 20px;
+    }
+}
+
 
 
