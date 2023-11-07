@@ -43,6 +43,17 @@ if (estiloRiver === "activado") {
     desactivarModoColor();
 };
 
+let botonCarrito = document.querySelector("#carrito-icon")
+let carritoTienda = document.querySelector(".carrito-tienda")
+
+function abrirCarrito() {
+    carritoTienda.classList.toggle("hidden");
+}
+
+botonCarrito.addEventListener("click", () => {
+    abrirCarrito()
+})
+
 const productos = [
     {
         id: "seca-01",
@@ -199,7 +210,7 @@ function cargaProductos(productosSeleccionados) {
         </div>`;
         productConteiner.append(div);
     })
-    actualizarBotonAgregarItem ()
+    actualizarBotonAgregarItem()
 }
 
 cargaProductos(productos)
@@ -213,9 +224,9 @@ botonFiltro.forEach(boton => {
         botonFiltro.forEach(boton => boton.classList.remove("active"))
         e.currentTarget.classList.add("active")
 
-        if(e.currentTarget.id != "todos"){
-        const productosSeleccion = productos.filter(producto => producto.categoria.id === e.currentTarget.id );
-        cargaProductos(productosSeleccion)
+        if (e.currentTarget.id != "todos") {
+            const productosSeleccion = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+            cargaProductos(productosSeleccion)
         } else {
             cargaProductos(productos)
         }
@@ -223,40 +234,30 @@ botonFiltro.forEach(boton => {
     })
 })
 
-let botonCarrito = document.querySelector("#carrito-icon")
-let carritoTienda = document.querySelector(".carrito-tienda")
+let productosEnCarrito = [];
+const carritoDeProductos = document.querySelector(".carrito-productos");
 
-function abrirCarrito () {
-    carritoTienda.classList.toggle ("hidden");
-}
 
-botonCarrito.addEventListener ("click", () => {
-    abrirCarrito()
-})
-
-function actualizarBotonAgregarItem () {
+function actualizarBotonAgregarItem() {
     botonAgregarItem = document.querySelectorAll(".agregar-producto");
     botonAgregarItem.forEach(boton => {
         boton.addEventListener("click", agregarAlCarrito);
     });
 };
 
-const productosEnCarrito = [];
-const carritoDeProductos = document.querySelector(".carrito-productos");
-
-
-
-function agregarAlCarrito (e) {
+function agregarAlCarrito(e) {
     const botonId = e.currentTarget.id;
     const productoListo = productos.find(producto => producto.id === botonId);
-    if(productosEnCarrito.some(producto => producto.id === botonId)) {
-        alert("El producto ya esta en el carrito");
-    } else{
-    productosEnCarrito.push(productoListo);
+    let productosCarriteados = JSON.parse(localStorage.getItem("Productos"));
+    productosCarriteados.some(producto => producto.id === botonId) ? alert("El producto ya esta en el carrito") : productosEnCarrito.push(productoListo) && console.log(productosEnCarrito);
     localStorage.setItem("Productos", JSON.stringify(productosEnCarrito));
-    console.log(productosEnCarrito);
+    productosEnCarrito = JSON.parse(localStorage.getItem("Productos"))
 }
-}
+
+
+
+
+
 
 
 
