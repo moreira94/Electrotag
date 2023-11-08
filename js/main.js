@@ -124,7 +124,7 @@ const productos = [
     },
     {
         id: "lavavaj-02",
-        titulo: "Lavavajillas Samsung Modelo DW-FN320W",
+        titulo: "Lavavajillas Samsung DW-FN320W",
         imagen: "../images/lavavajsamsung.png",
         carga: "12 cubiertos",
         caracteristica: "Cantidad de programas: 6",
@@ -137,7 +137,7 @@ const productos = [
     },
     {
         id: "lava-04",
-        titulo: "Lavarropas ELECTROLUX ELAC209W",
+        titulo: "Lavarropas Electrolux ELAC209W",
         imagen: "../images/electroluxelac209w.png",
         carga: "9Kg",
         caracteristica: "Velocidad de Centrifugado: 750RPM",
@@ -184,7 +184,7 @@ const productos = [
             nombre: "Lavavajillas",
             id: "lavavajillas"
         },
-        precio: "$380.000,"
+        precio: "$380.000",
 
     }
 ];
@@ -251,6 +251,7 @@ function actualizarBotonAgregarItem() {
     });
 };
 
+
 function agregarAlCarrito(e) {
     const botonId = e.currentTarget.id;
     const productoListo = productos.find(producto => producto.id === botonId);
@@ -286,6 +287,8 @@ function resetCarrito() {
 }
 
 botonReset.addEventListener("click", resetCarrito)
+
+sumarAlCarrito()
 
 
 
