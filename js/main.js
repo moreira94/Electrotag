@@ -70,7 +70,7 @@ const productos = [
             nombre: "Secarropas",
             id: "secarropas"
         },
-        precio: "$280.000",
+        precio: 280000,
     },
     {
         id: "lava-01",
@@ -82,7 +82,7 @@ const productos = [
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: "$320.000",
+        precio: 320000,
     },
     {
         id: "lavavaj-01",
@@ -94,7 +94,7 @@ const productos = [
             nombre: "Lavavajillas",
             id: "lavavajillas"
         },
-        precio: "$290.000",
+        precio: 290000,
     },
     {
         id: "lava-02",
@@ -106,7 +106,7 @@ const productos = [
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: "$220.000",
+        precio: 220000,
 
     },
     {
@@ -119,7 +119,7 @@ const productos = [
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: "$190.000",
+        precio: 190000,
 
     },
     {
@@ -132,7 +132,7 @@ const productos = [
             nombre: "Lavavajillas",
             id: "lavavajillas"
         },
-        precio: "$420.000",
+        precio: 420000,
 
     },
     {
@@ -145,7 +145,7 @@ const productos = [
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: "$210.000",
+        precio: 210000,
 
     },
     {
@@ -158,7 +158,7 @@ const productos = [
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: "$170.000",
+        precio: 170000,
 
     },
     {
@@ -171,7 +171,7 @@ const productos = [
             nombre: "Lavarropas",
             id: "lavarropas"
         },
-        precio: "$230.000",
+        precio: 230000,
 
     },
     {
@@ -184,11 +184,13 @@ const productos = [
             nombre: "Lavavajillas",
             id: "lavavajillas"
         },
-        precio: "$380.000",
+        precio: 380000,
 
     }
 ];
 
+let sumaTotal = document.querySelector("#total-carrito")
+let totalCalculado = 0;
 const productConteiner = document.querySelector(".productos");
 let botonAgregarItem = document.querySelectorAll(".agregar-producto")
 
@@ -205,7 +207,7 @@ function cargaProductos(productosSeleccionados) {
         <img class="imgtienda" src="${producto.imagen}" alt="${producto.titulo}">
         <div class="descripcion">
             <h3>${producto.titulo}</h3>
-            <h3>${producto.precio}</h3>
+            <h3>$${producto.precio}</h3>
             <ol>
                 <li>${producto.carga}</li>
                 <li>${producto.caracteristica}</li>
@@ -215,6 +217,7 @@ function cargaProductos(productosSeleccionados) {
         productConteiner.append(div);
     })
     actualizarBotonAgregarItem()
+    
 }
 
 //Filtro de productos de la página//
@@ -274,6 +277,9 @@ function sumarAlCarrito() {
         </div>`;
         carritoDeProductos.append(div);
     })
+    sumaTotal.innerHTML = total()
+
+
 }
 
 //Boton de reset de carrito//
@@ -284,11 +290,33 @@ function resetCarrito() {
     productosEnCarrito = []
     localStorage.setItem("Productos", 0)
     carritoDeProductos.innerHTML=""
+    total()
+    sumaTotal.innerHTML="0"
+    totalCalculado=0
 }
 
 botonReset.addEventListener("click", resetCarrito)
 
 sumarAlCarrito()
+
+// Total //
+
+
+sumaTotal.innerHTML = total()
+
+function total () {
+    totalCalculado=0
+    productosEnCarrito.map(producto => {
+        totalCalculado += producto.precio
+    })
+    return totalCalculado
+
+}
+
+
+
+
+
 
 
 

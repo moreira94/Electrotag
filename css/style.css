@@ -398,6 +398,18 @@ form textarea {
   .formulario {
     width: 90%;
   }
+  .artefacto-carrito, .precio-carrito, .vaciar-carrito, .checkout-button {
+    font-size: 12px !important;
+  }
+  .total-carrito {
+    font-size: 16px !important;
+  }
+  .carrito-tienda {
+    max-width: 250px !important;
+  }
+  .carrito-tienda .carrito-producto {
+    max-width: 200px !important;
+  }
 }
 @media only screen and (min-width: 991px) {
   .zonas-cards {
@@ -575,8 +587,7 @@ form textarea {
   position: fixed;
   bottom: 30px;
   left: 10px;
-  max-width: 700px;
-  max-height: 600px;
+  max-height: 500px;
   border-radius: 10px;
   border: 2px solid;
   border-color: black;
@@ -595,6 +606,10 @@ form textarea {
 }
 .carrito-tienda .vaciar-carrito {
   color: red;
+}
+.carrito-tienda .carrito-productos {
+  max-height: 220px;
+  overflow-y: scroll;
 }
 
 .hidden {
@@ -627,6 +642,8 @@ form textarea {
 }
 
 .total-carrito {
+  display: flex;
+  flex-direction: row;
   font-size: 25px;
   font-weight: bold;
 }
