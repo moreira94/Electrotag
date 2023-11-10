@@ -236,6 +236,7 @@ function finalizarCompra() {
                 background: `rgba(30, 113, 70, 0.9)`,
                 color: `white` , 
               });
+              resetCarrito()
             } else if (
               result.dismiss === Swal.DismissReason.cancel
             ) {
