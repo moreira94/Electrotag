@@ -398,7 +398,10 @@ form textarea {
   .formulario {
     width: 90%;
   }
-  .artefacto-carrito, .precio-carrito, .vaciar-carrito, .checkout-button {
+  .artefacto-carrito,
+  .precio-carrito,
+  .vaciar-carrito,
+  .checkout-button {
     font-size: 12px !important;
   }
   .total-carrito {
@@ -427,6 +430,9 @@ form textarea {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+  .carrito-tienda {
+    min-width: 465px !important;
   }
 }
 .nssection {
@@ -587,6 +593,7 @@ form textarea {
   position: fixed;
   bottom: 30px;
   left: 10px;
+  min-width: 219px;
   max-height: 500px;
   border-radius: 10px;
   border: 2px solid;
@@ -616,14 +623,16 @@ form textarea {
   display: none;
 }
 
-.carrito-productos, .total-carrito {
+.carrito-productos,
+.total-carrito {
   padding-left: 10px;
   padding-right: 5px;
   font-size: 20px;
   display: flex;
   flex-direction: column;
 }
-.carrito-productos .precio-carrito, .total-carrito .precio-carrito {
+.carrito-productos .precio-carrito,
+.total-carrito .precio-carrito {
   padding: 10px;
   width: 100px;
 }

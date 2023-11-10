@@ -1,3 +1,20 @@
+//Array de productos //
+
+let productos = []
+
+let sumaTotal = document.querySelector("#total-carrito")
+let totalCalculado = 0;
+const productConteiner = document.querySelector(".productos");
+let botonAgregarItem = document.querySelectorAll(".agregar-producto")
+
+fetch("../js/productos.json")
+    .then(response => response.json())
+    .then(array =>{
+        productos = array;
+        cargaProductos(productos)
+    })
+
+
 //Estilos de pagina//
 const modeSelectButton = document.querySelector("#mode-select");
 const nav = document.querySelector(".container-fluid")
@@ -57,144 +74,7 @@ botonCarrito.addEventListener("click", () => {
     abrirCarrito()
 })
 
-//Array de productos //
 
-const productos = [
-    {
-        id: "seca-01",
-        titulo: "Secarropas Ariston AQCF 852 BU",
-        imagen: "../images/seca-ariston.webp",
-        carga: "8Kg",
-        caracteristica: "Secado por condensación",
-        categoria: {
-            nombre: "Secarropas",
-            id: "secarropas"
-        },
-        precio: 280000,
-    },
-    {
-        id: "lava-01",
-        titulo: "Lavarropas LG F1400TD",
-        imagen: "../images/lgf1400td.png",
-        carga: "8,5kg",
-        caracteristica: "Velocidad de Centrifugado: 1400RPM",
-        categoria: {
-            nombre: "Lavarropas",
-            id: "lavarropas"
-        },
-        precio: 320000,
-    },
-    {
-        id: "lavavaj-01",
-        titulo: "Lavavajillas Whirlpool WLF12AB",
-        imagen: "../images/lavavaj-whirlpool.webp",
-        carga: "12 Cubiertos",
-        caracteristica: "Cantidad de programas: 8",
-        categoria: {
-            nombre: "Lavavajillas",
-            id: "lavavajillas"
-        },
-        precio: 290000,
-    },
-    {
-        id: "lava-02",
-        titulo: "Lavarropas GE GELVGE08e12",
-        imagen: "../images/gelvge07e12b.png",
-        carga: "7Kg",
-        caracteristica: "Velocidad de Centrifugado: 1200RPM",
-        categoria: {
-            nombre: "Lavarropas",
-            id: "lavarropas"
-        },
-        precio: 220000,
-
-    },
-    {
-        id: "lava-03",
-        titulo: "Lavarropas Candy GV108t12",
-        imagen: "../images/candygv108t12.png",
-        carga: "8Kg",
-        caracteristica: "Velocidad de Centrifugado: 1000RPM",
-        categoria: {
-            nombre: "Lavarropas",
-            id: "lavarropas"
-        },
-        precio: 190000,
-
-    },
-    {
-        id: "lavavaj-02",
-        titulo: "Lavavajillas Samsung DW-FN320W",
-        imagen: "../images/lavavajsamsung.png",
-        carga: "12 cubiertos",
-        caracteristica: "Cantidad de programas: 6",
-        categoria: {
-            nombre: "Lavavajillas",
-            id: "lavavajillas"
-        },
-        precio: 420000,
-
-    },
-    {
-        id: "lava-04",
-        titulo: "Lavarropas Electrolux ELAC209W",
-        imagen: "../images/electroluxelac209w.png",
-        carga: "9Kg",
-        caracteristica: "Velocidad de Centrifugado: 750RPM",
-        categoria: {
-            nombre: "Lavarropas",
-            id: "lavarropas"
-        },
-        precio: 210000,
-
-    },
-    {
-        id: "lava-05",
-        titulo: "Lavarropas Drean Gold Blue 8.6",
-        imagen: "../images/dreangoldblue86.png",
-        carga: "6Kg",
-        caracteristica: "Velocidad de Centrifugado: 800RPM",
-        categoria: {
-            nombre: "Lavarropas",
-            id: "lavarropas"
-        },
-        precio: 170000,
-
-    },
-    {
-        id: "lava-06",
-        titulo: "Lavarropas Gafa Modelo 7500",
-        imagen: "../images/gafa7500.png",
-        carga: "6Kg",
-        caracteristica: "Velocidad de Centrifugado: 800RPM",
-        categoria: {
-            nombre: "Lavarropas",
-            id: "lavarropas"
-        },
-        precio: 230000,
-
-    },
-    {
-        id: "lavavaj-03",
-        titulo: "Lavavajillas Ariston LKF71",
-        imagen: "../images/lavavajariston.png",
-        carga: "14 cubiertos",
-        caracteristica: "Cantidad de programas: 6",
-        categoria: {
-            nombre: "Lavavajillas",
-            id: "lavavajillas"
-        },
-        precio: 380000,
-
-    }
-];
-
-let sumaTotal = document.querySelector("#total-carrito")
-let totalCalculado = 0;
-const productConteiner = document.querySelector(".productos");
-let botonAgregarItem = document.querySelectorAll(".agregar-producto")
-
-cargaProductos(productos)
 
 function cargaProductos(productosSeleccionados) {
 
@@ -217,7 +97,7 @@ function cargaProductos(productosSeleccionados) {
         productConteiner.append(div);
     })
     actualizarBotonAgregarItem()
-    
+
 }
 
 //Filtro de productos de la página//
@@ -254,14 +134,20 @@ function actualizarBotonAgregarItem() {
     });
 };
 
-
 function agregarAlCarrito(e) {
     const botonId = e.currentTarget.id;
     const productoListo = productos.find(producto => producto.id === botonId);
-    productosEnCarrito.some(producto => producto.id === botonId) ? alert("El producto ya esta en el carrito") : productosEnCarrito.push(productoListo) && console.log(productosEnCarrito);
+    productosEnCarrito.some(producto => producto.id === botonId) ? Swal.fire({
+        icon: "warning",
+        title: "Error",
+        text: "El artefacto ya está en el carrito",
+        background: `rgba(109, 39, 39, 0.9)`,
+        color: `white` , 
+      }) : productosEnCarrito.push(productoListo) && console.log(productosEnCarrito);
     localStorage.setItem("Productos", JSON.stringify(productosEnCarrito));
     productosEnCarrito = JSON.parse(localStorage.getItem("Productos"));
     sumarAlCarrito()
+
 }
 
 const carritoDeProductos = document.querySelector(".carrito-productos");
@@ -280,6 +166,7 @@ function sumarAlCarrito() {
     sumaTotal.innerHTML = total()
 
 
+
 }
 
 //Boton de reset de carrito//
@@ -289,10 +176,10 @@ let botonReset = document.querySelector(".vaciar-carrito")
 function resetCarrito() {
     productosEnCarrito = []
     localStorage.setItem("Productos", 0)
-    carritoDeProductos.innerHTML=""
+    carritoDeProductos.innerHTML = ""
     total()
-    sumaTotal.innerHTML="0"
-    totalCalculado=0
+    sumaTotal.innerHTML = "0"
+    totalCalculado = 0
 }
 
 botonReset.addEventListener("click", resetCarrito)
@@ -304,8 +191,8 @@ sumarAlCarrito()
 
 sumaTotal.innerHTML = total()
 
-function total () {
-    totalCalculado=0
+function total() {
+    totalCalculado = 0
     productosEnCarrito.map(producto => {
         totalCalculado += producto.precio
     })
@@ -313,9 +200,56 @@ function total () {
 
 }
 
+const checkOut = document.querySelector(".checkout-button")
+checkOut.addEventListener("click", finalizarCompra)
 
 
-
+function finalizarCompra() {
+    if (productosEnCarrito.length === 0) {
+        Swal.fire({
+            title: "Error",
+            text: "No ha seleccionado ningún producto",
+            icon: "error",
+            background: `rgba(109, 39, 39, 0.9)`,
+            color: `white` , 
+        });
+    } else {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: "btn btn-success",
+              cancelButton: "btn btn-danger"
+            },
+            buttonsStyling: false
+          });
+          swalWithBootstrapButtons.fire({
+            title: "¿Quieres finalizar tu compra?",
+            showCancelButton: true,
+            confirmButtonText: "Si",
+            cancelButtonText: "No",
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              swalWithBootstrapButtons.fire({
+                title: "Felicitaciones!",
+                text: "Su compra se ha realizado con éxito.",
+                icon: "success",
+                background: `rgba(30, 113, 70, 0.9)`,
+                color: `white` , 
+              });
+            } else if (
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire({
+                title: "Commpra cancelada",
+                text: "Se ha cancelado la compra",
+                icon: "error",
+                background: `rgba(109, 39, 39, 0.9)`,
+                color: `white` , 
+              });
+            }
+          });
+    }
+}
 
 
 

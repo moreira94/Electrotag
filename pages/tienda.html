@@ -42,23 +42,21 @@
                         <li class="nav-item">
                             <a class="nav-link" href="../pages/contacto.html">CONTACTO</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="../pages/tienda.html">TIENDA</a>
                         <li style="cursor: pointer" id="carrito-icon" class="bi-cart nav-link"></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-<!--Cuerpo de la página-->
+    <!--Cuerpo de la página-->
     <main>
         <section class="filter">
             <h3>Filtrar prouctos por:
             </h3>
-                <button id="lavarropas" class="filter-button">Lavarropas</button>
-                <button id="lavavajillas" class="filter-button">Lavavajillas</button>
-                <button id="secarropas" class="filter-button">Secarropas</button>
-                <button id="todos" class="filter-button">Todos los productos</button>
+            <button id="lavarropas" class="filter-button">Lavarropas</button>
+            <button id="lavavajillas" class="filter-button">Lavavajillas</button>
+            <button id="secarropas" class="filter-button">Secarropas</button>
+            <button id="todos" class="filter-button active">Todos los productos</button>
 
         </section>
         <section class="productos">
@@ -66,15 +64,15 @@
         <div class="carrito-tienda hidden">
             <div class="carrito-productos">
             </div>
-            <div class="total-carrito">TOTAL: $<span id="total-carrito"s></span></div>
+            <div class="total-carrito">TOTAL: $<span id="total-carrito" s></span></div>
             <button class="vaciar-carrito">Vaciar Carrito
             </button>
-            <a href="checkout.html" class="checkout-button">
-            Finalizar compra
-            </a>
+            <button class="checkout-button">
+                Finalizar compra
+            </button>
         </div>
     </main>
-<!--Footer-->
+    <!--Footer-->
     <footer class="footer">
         <section class="footer-enlaces">
             <section>
@@ -106,11 +104,13 @@
         </section>
         <a href=""><i class="bi bi-file-arrow-up arrow"></i></a>
     </footer>
-<!--Scripts-->
+    <!--Scripts-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/main.js"></script>
+
 
 
 </body>

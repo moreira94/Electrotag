@@ -47,6 +47,7 @@
             right: 0px;
             cursor: pointer;
         }
+
         .bi-cart4 {
             display: flex;
             justify-content: right;
@@ -80,7 +81,7 @@
 }
 
 .filter-button {
-    background-color: $background-color_4  ;
+    background-color: $background-color_4 ;
     color: $color_2 ;
     padding: 5px;
     margin-left: 10px;
@@ -95,16 +96,18 @@
 
 .carrito-tienda {
     display: grid;
-    grid-template-rows: (4fr);       
+    grid-template-rows: (4fr);
     position: fixed;
     bottom: 30px;
     left: 10px;
+    min-width: 219px;
     max-height: 500px;
     border-radius: 10px;
     border: 2px solid;
     border-color: $color_1;
     background-color: $color_4;
     z-index: 1;
+
     .checkout-button {
         background-color: $color_3;
         grid-row: 6;
@@ -115,9 +118,11 @@
         height: 40px;
         color: green;
     }
+
     .vaciar-carrito {
         color: red;
     }
+
     .carrito-productos {
         max-height: 220px;
         overflow-y: scroll;
@@ -128,12 +133,14 @@
     display: none;
 }
 
-.carrito-productos, .total-carrito  {
+.carrito-productos,
+.total-carrito {
     padding-left: 10px;
     padding-right: 5px;
     font-size: 20px;
-    display:flex;
+    display: flex;
     flex-direction: column;
+
     .precio-carrito {
         padding: 10px;
         width: 100px;
@@ -159,6 +166,3 @@
     font-size: 25px;
     font-weight: bold;
 }
-
-
-

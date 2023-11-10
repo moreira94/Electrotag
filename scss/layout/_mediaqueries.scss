@@ -94,9 +94,10 @@
         flex-direction: column;
         align-items: center;
     }
+
     .footer-enlaces {
         display: flex !important;
-        flex-direction: column;    
+        flex-direction: column;
         align-items: flex-start !important;
     }
 
@@ -126,20 +127,24 @@
         width: 90%;
     }
 
-    .artefacto-carrito, .precio-carrito, .vaciar-carrito, .checkout-button {
+    .artefacto-carrito,
+    .precio-carrito,
+    .vaciar-carrito,
+    .checkout-button {
         font-size: 12px !important;
     }
 
     .total-carrito {
-        font-size: 16px !important; 
+        font-size: 16px !important;
     }
 
     .carrito-tienda {
         max-width: 250px !important;
+
         .carrito-producto {
             max-width: 200px !important;
+        }
     }
-}
 }
 
 @media only screen and (min-width: 991px) {
@@ -158,5 +163,10 @@
 
     .quienessomosformato {
         @include flex;
+    }
+
+    .carrito-tienda {
+        min-width: 465px !important;
+
     }
 }
