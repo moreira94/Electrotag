@@ -65,12 +65,17 @@ if (estiloRiver === "activado") {
 
 let botonCarrito = document.querySelector("#carrito-icon")
 let carritoTienda = document.querySelector(".carrito-tienda")
+let carritoVisible = document.querySelector(".visible")
 
 function abrirCarrito() {
     carritoTienda.classList.toggle("hidden");
 }
 
 botonCarrito.addEventListener("click", () => {
+    abrirCarrito()
+})
+
+carritoVisible.addEventListener("click", () => {
     abrirCarrito()
 })
 

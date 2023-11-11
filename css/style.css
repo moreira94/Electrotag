@@ -435,6 +435,21 @@ form textarea {
     min-width: 465px !important;
   }
 }
+@media only screen and (max-width: 991px) {
+  .escondido {
+    display: none;
+  }
+  .visible {
+    display: inline !important;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 40px;
+    color: black;
+    z-index: 10;
+  }
+}
 .nssection {
   margin-left: 40px;
   padding-top: 20px;
@@ -655,6 +670,10 @@ form textarea {
   flex-direction: row;
   font-size: 25px;
   font-weight: bold;
+}
+
+.visible {
+  display: none;
 }
 
 
