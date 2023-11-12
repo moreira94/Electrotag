@@ -252,6 +252,7 @@ function finalizarCompra() {
                 background: `rgba(109, 39, 39, 0.9)`,
                 color: `white` , 
               });
+              resetCarrito()
             }
           });
     }
